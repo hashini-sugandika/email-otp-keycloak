@@ -150,6 +150,7 @@ public class EmailOTPAuthenticator implements Authenticator {
 
   @Override
   public void close() {
+    // Intentionally left empty for default behavior
   }
 
   private int getMaxRetries(AuthenticatorConfigModel config) {
