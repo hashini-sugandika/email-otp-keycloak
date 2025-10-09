@@ -162,7 +162,7 @@ public class EmailOTPAuthenticator implements Authenticator {
             .getOrDefault(
                 EmailOTPAuthenticatorFactory.CONFIG_PROP_MAX_RETRIES,
                 "3"));
-    return maxRetries;
+    return getmaxRetries(context);
   }
 
   private String getCode(AuthenticatorConfigModel config) {
@@ -196,7 +196,7 @@ public class EmailOTPAuthenticator implements Authenticator {
     }
 
     // if the string builder is empty allow all charsets as default
-    if (sb.length() == 0) {
+    if (sb.isEmpty() == 0) {
       sb.append(ALPHA_UPPER)
           .append(ALPHA_LOWER)
           .append(NUM);
