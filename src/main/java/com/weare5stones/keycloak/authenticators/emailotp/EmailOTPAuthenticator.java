@@ -146,11 +146,14 @@ public class EmailOTPAuthenticator implements Authenticator {
 
   @Override
   public void setRequiredActions(KeycloakSession session, RealmModel realm, UserModel user) {
+    // FIX: Intentionally left empty because this authenticator does not assign any required user actions.
+    // This satisfies SonarQube rule S1186 (empty method body) by documenting why it's empty.
   }
 
   @Override
   public void close() {
-    // Intentionally left empty for default behavior
+    // FIX: Intentionally left empty — no cleanup or resource release is required for this authenticator.
+    // This satisfies SonarQube rule S1186 by explaining the absence of logic.
   }
 
   private int getMaxRetries(AuthenticatorConfigModel config) {
