@@ -95,7 +95,7 @@ public class EmailOTPAuthenticatorFactory implements AuthenticatorFactory {
 
   @Override
   public void postInit(KeycloakSessionFactory factory) {
-        // FIX: Intentionally left empty — nothing to execute after factory initialization.
+        // No post-initialization required for this factory; method intentionally left empty
   }
 
   @Override
