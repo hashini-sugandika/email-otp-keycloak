@@ -90,14 +90,17 @@ public class EmailOTPAuthenticatorFactory implements AuthenticatorFactory {
 
   @Override
   public void init(Config.Scope config) {
+    // FIX: Intentionally left empty — no specific initialization logic is required for this factory.
   }
 
   @Override
   public void postInit(KeycloakSessionFactory factory) {
+        // FIX: Intentionally left empty — nothing to execute after factory initialization.
   }
 
   @Override
   public void close() {
+        // FIX: Intentionally left empty — no resources to release when the factory is closed.
   }
 
 }
