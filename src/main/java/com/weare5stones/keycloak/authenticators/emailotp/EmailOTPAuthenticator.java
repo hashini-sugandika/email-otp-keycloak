@@ -157,12 +157,11 @@ public class EmailOTPAuthenticator implements Authenticator {
   }
 
   private int getMaxRetries(AuthenticatorConfigModel config) {
-    int maxRetries = Integer.parseInt(
+     return Integer.parseInt(
         config.getConfig()
             .getOrDefault(
                 EmailOTPAuthenticatorFactory.CONFIG_PROP_MAX_RETRIES,
                 "3"));
-    return getmaxRetries(context);
   }
 
   private String getCode(AuthenticatorConfigModel config) {
