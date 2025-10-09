@@ -166,17 +166,17 @@ public class EmailOTPAuthenticator implements Authenticator {
 
   private String getCode(AuthenticatorConfigModel config) {
     int length = Integer.parseInt(config.getConfig().get(EmailOTPAuthenticatorFactory.CONFIG_PROP_LENGTH));
-    Boolean allowUppercase = Boolean.parseBoolean(
+    boolean allowUppercase = Boolean.parseBoolean(
         config.getConfig()
             .getOrDefault(
                 EmailOTPAuthenticatorFactory.CONFIG_PROP_ALLOW_UPPERCASE,
                 "true"));
-    Boolean allowLowercase = Boolean.parseBoolean(
+    boolean allowLowercase = Boolean.parseBoolean(
         config.getConfig()
             .getOrDefault(
                 EmailOTPAuthenticatorFactory.CONFIG_PROP_ALLOW_LOWERCASE,
                 "true"));
-    Boolean allowNumbers = Boolean.parseBoolean(
+    boolean allowNumbers = Boolean.parseBoolean(
         config.getConfig()
             .getOrDefault(
                 EmailOTPAuthenticatorFactory.CONFIG_PROP_ALLOW_NUMBERS,
