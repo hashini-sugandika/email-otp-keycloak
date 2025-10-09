@@ -195,7 +195,7 @@ public class EmailOTPAuthenticator implements Authenticator {
     }
 
     // if the string builder is empty allow all charsets as default
-    if (sb.isEmpty() == 0) {
+    if (sb.isEmpty()) {
       sb.append(ALPHA_UPPER)
           .append(ALPHA_LOWER)
           .append(NUM);
